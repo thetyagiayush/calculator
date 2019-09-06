@@ -24,8 +24,8 @@ class Button:
 		elif v == "DEL":
 			current_value = self.results.text()
 			self.results.setText(current_value[:-1])
-		elif v == "Bhencho Baba Button":
-			self.results.setText("Himanshu BC")
+		elif v == "About Me":
+			self.results.setText("Coded By Ayush Tyagi")
 		else:
 			current_value = self.results.text()
 			new_value = current_value + str(v)
@@ -35,7 +35,7 @@ class Button:
 class Application(QWidget):
 	def __init__(self):
 		super().__init__()
-		self.setWindowTitle("Bhencho Calculator")
+		self.setWindowTitle("Calculator")
 		self.CreateApp()
 
 	def CreateApp(self):
@@ -45,7 +45,7 @@ class Application(QWidget):
 
 		grid.addWidget(results, 0, 0, 1, 4)
 
-		buttons = ["AC", "√", "/", "DEL", 7, 8, 9, "*", 4, 5, 6, "-", 1, 2, 3, "+", 0, ".", "=", "Bhencho Baba Button"]
+		buttons = ["AC", "√", "/", "DEL", 7, 8, 9, "*", 4, 5, 6, "-", 1, 2, 3, "+", 0, ".", "=", "About Me"]
 
 		row = 1
 		col = 0
@@ -59,7 +59,7 @@ class Application(QWidget):
 			if button == 0:
 				grid.addWidget(buttonObject.b, row, col, 1, 2)
 				col += 1
-			elif button == "Bhencho Baba Button":
+			elif button == "About Me":
 				grid.addWidget(buttonObject.b, row, col, 6, 4)
 				col += 1
 			else:
